@@ -1,6 +1,10 @@
 class Calculator {
-  add() {
-    // implement me
+  add(...input) {
+    if (input.length > 1) {
+      const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      return input.reduce(reducer);
+    }
+    return 0;
   }
 }
 

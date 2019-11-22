@@ -13,6 +13,8 @@ describe("Calculator", () => {
   });
 
   it("take the number in format string and return the integer of that string", () => {
-    expect(calculator.add("1")).toBe(1);
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].forEach(number =>
+      expect(calculator.add(number.toString())).toBe(number)
+    );
   });
 });
